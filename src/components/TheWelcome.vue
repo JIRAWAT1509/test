@@ -5,6 +5,15 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+
+// // @ts-ignore
+// import { directus } from './../service/directus.js';
+
+// const data1 = await directus.items("Test1").readByQuery({
+//             fields: ["id", "topic", "content", "iconId"]
+//         });
+
+// console.log(data1)
 </script>
 
 <template>

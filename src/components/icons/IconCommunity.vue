@@ -1,3 +1,16 @@
+<script setup lang="ts">
+// // @ts-ignore
+// import { directus } from './service/directus.js';
+
+// console.log(directus)
+
+// const data = await directus.items("productlist").readByQuery({
+//             fields: ["id", "name", "sku", "category", "price", "qty", "statusclass", "status", "rating", "img"],
+//             filter: { is_active: { _eq: "false" } },
+//         });
+
+// console.log(data)
+</script>
 <template>
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor">
     <path

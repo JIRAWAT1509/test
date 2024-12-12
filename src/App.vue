@@ -1,8 +1,24 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import { ref } from 'vue'
+import { ref,onMounted } from 'vue'
 
+//@ts-ignore
+import { directus } from './service/directus.js';
+
+const data = ref([]);
+
+onMounted(async () => {
+  try {
+    const response = await directus.items("productlist").readByQuery({
+      fields: ['id', 'name', 'sku', 'category', 'price', 'qty', 'statusclass', 'status', 'rating', 'img'],
+      filter: { is_active: { _eq: 'false' } },
+    });
+    data.value = response.data || [];
+  } catch (error) {
+    console.error("Error fetching product list:", error);
+  }
+});
 </script>
 
 <template>
